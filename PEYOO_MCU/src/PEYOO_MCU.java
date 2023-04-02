@@ -3,15 +3,17 @@ public class PEYOO_MCU {
     public static void main(String[] args) {    
         Boolean valido=true;
         char simb=0;
+        String simb2;
         Scanner input=new Scanner(System.in);
         int i=0, n;
         char p, opuesto=0;
         System.out.println("Introduce el tamaño de la operacion");
         n=input.nextInt();
         Pila s=new Pila(n);
-        while(i<n){
-            System.out.println("Introduce un valor");
-            simb=input.next().charAt(0);
+        System.out.println("Introduce un valor");
+        simb2=input.next();
+        while(i<n){          
+            simb=simb2.charAt(i);
             if(simb=='(' || simb=='[' || simb=='{'){
                 s.push(simb);
             } 
