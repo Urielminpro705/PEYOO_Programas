@@ -2,7 +2,7 @@ public class ColaSimple{
     char[] cola;
     char[] aux;
     int fin=-1;
-    int contador=0, i;
+    int contador=0;
     
     public ColaSimple(int tam){
         cola=new char[tam];
