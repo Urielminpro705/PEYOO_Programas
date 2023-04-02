@@ -1,16 +1,19 @@
 import java.util.Scanner;
-public class PEYOO_MCU{
+public class PEYOO_MCU_Cola{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-        ColaSimple a=new ColaSimple(5);
-        char x;
+        ColaSimple a=new ColaSimple(50);
+        String x;
         int opcion;
         do{
             opcion=menu();
             switch(opcion){
                 case 1:
                     System.out.println("Introduce un valor");
-                    a.insertar(x=input.next().charAt(0));
+                    x=input.next();
+                    for(int i=0;i<x.length();i++){
+                        a.insertar(x.charAt(i));
+                    }
                     break;
     
                 case 2:

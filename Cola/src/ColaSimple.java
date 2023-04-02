@@ -1,9 +1,12 @@
 public class ColaSimple{
     char[] cola;
-    int inicio, fin=-1;
+    char[] aux;
+    int fin=-1;
+    int contador=0, i;
     
     public ColaSimple(int tam){
         cola=new char[tam];
+        aux=new char[tam];
     }
 
 
@@ -22,7 +25,7 @@ public class ColaSimple{
         }
     }*/
 
-    public void insertar(char elemento){
+    /*public void insertar(char elemento){
         if(fin==-1){
             fin=0;
             inicio=0;
@@ -34,10 +37,37 @@ public class ColaSimple{
                 cola[fin]=elemento;
             }       
         }      
+    }*/
+
+    public void insertar(char elemento){
+        if(fin==-1){
+            fin=0;
+            cola[fin]=elemento;
+            contador++;
+        }
+        else{
+            if(fin<cola.length){
+                fin++;
+                cola[fin]=elemento;
+                contador++;
+            }       
+        }      
     }
 
     public void eliminar(){
-        
+        if(fin==-1){
+            System.out.println("No hay elementos en la cola");
+        }
+        else{     
+            i=0;      
+            do{
+                aux[i]=cola[i+1];
+                i++;
+            }while(i<contador);
+            cola=aux;
+            contador--;
+            fin=contador-1;
+        }       
     }
 
     public void imprimir(){   
