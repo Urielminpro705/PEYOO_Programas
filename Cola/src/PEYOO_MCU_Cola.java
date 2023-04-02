@@ -18,7 +18,7 @@ public class PEYOO_MCU_Cola{
                         if(x.length()>tam){
                             System.out.println("Demasidado grande, vuelve a intentar");
                         }
-                    }while(x.length()<=tam);
+                    }while(x.length()>tam);
                     
 
                     for(int i=0;i<x.length();i++){
