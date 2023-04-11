@@ -24,6 +24,16 @@ public class ColaSimple{
         }      
     }
 
+    public Boolean isVacia(){
+        Boolean vacia;
+        if(this.contador==0){
+            vacia=true;
+        }
+        else{
+            vacia=false;
+        }
+    }
+
     public void pop(){
         if(fin==-1){
             System.out.println("No hay elementos en la cola");
