@@ -32,7 +32,22 @@ public class ColaSimple{
         else{
             vacia=false;
         }
+        return vacia;
     }
+
+    public int obtenerPrimero(){
+        int primero;
+        primero=this.cola[0];
+        return primero;
+    }
+
+    public int obtenerDimension(){
+        int dimension;
+        dimension=contador;
+        return dimension;
+    }
+
+
 
     public void pop(){
         if(fin==-1){
@@ -56,7 +71,7 @@ public class ColaSimple{
          
     }
 
-    public void imprimir(){   
+    public void imprimirCola(){   
         for(int i=0; i<contador;i++){
             System.out.print(cola[i]);
         } 

@@ -31,7 +31,7 @@ public class PEYOO_MCU_Cola{
                 break;
 
                 case 3:
-                    a.imprimir();
+                    a.imprimirCola();
                 break;
 
                 case 4:
