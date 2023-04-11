@@ -9,7 +9,7 @@ public class ColaSimple{
         aux=new char[tam];
     }
 
-    public void insertar(char elemento){
+    public void push(char elemento){
         if(fin==-1){
             fin=0;
             cola[fin]=elemento;
@@ -24,7 +24,7 @@ public class ColaSimple{
         }      
     }
 
-    public void eliminar(){
+    public void pop(){
         if(fin==-1){
             System.out.println("No hay elementos en la cola");
         }
