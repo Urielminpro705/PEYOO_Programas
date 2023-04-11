@@ -22,12 +22,12 @@ public class PEYOO_MCU_Cola{
                     
 
                     for(int i=0;i<x.length();i++){
-                        a.insertar(x.charAt(i));
+                        a.push(x.charAt(i));
                     }
                 break;
 
                 case 2:
-                    a.eliminar();
+                    a.pop();
                 break;
 
                 case 3:
