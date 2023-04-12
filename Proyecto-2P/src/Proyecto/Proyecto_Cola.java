@@ -6,7 +6,7 @@ public class Proyecto_Cola{
         Cola a;
         Cancion x;
         int opcion, tam;
-        System.out.println("Introduce el tamaño de la cola");
+        System.out.println("Introduce el tamaño de la cola de reproduccion");
         tam=input.nextInt();
         a=new Cola(tam);
         do{
