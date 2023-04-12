@@ -73,7 +73,7 @@ public class Cola{
 
     public void imprimirCola(){   
         for(int i=0; i<contador;i++){
-            System.out.print(cola[i]);
+            System.out.print(cola[i].nombre);
         } 
         System.out.println("\n");      
     }

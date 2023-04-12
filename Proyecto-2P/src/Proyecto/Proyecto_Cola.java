@@ -13,9 +13,10 @@ public class Proyecto_Cola{
             opcion=menu();
             switch(opcion){
                 case 1:
-                    System.out.println("Introduce un elemento en la cola (maximo " +tam+")");
+                    System.out.println("Introduce el nombre de la cancion");
                     x=new Cancion();
                     x.nombre=input.next();
+                    a.push(x);                  
                 break;
 
                 case 2:
