@@ -36,9 +36,14 @@ public class Cola{
         return vacia;
     }
 
-    public Cancion obtenerPrimero(){
-        Cancion primero;
-        primero=this.cola[0];
+    public String obtenerPrimero(){
+        String primero;
+        if(contador==0){
+            primero="No hay canciones en la cola";
+        }
+        else{
+            primero=this.cola[0].nombre;
+        }
         return primero;
     }
 
@@ -72,8 +77,9 @@ public class Cola{
     }
 
     public void imprimirCola(){   
+        System.out.println("---Cola de reproduccion--");
         for(int i=0; i<contador;i++){
-            System.out.print(cola[i].nombre);
+            System.out.println((i+1)+") "+cola[i].nombre);
         } 
         System.out.println("\n");      
     }

@@ -10,7 +10,7 @@ public class Proyecto_Cola{
         tam=input.nextInt();
         a=new Cola(tam);
         do{
-            opcion=menu();
+            opcion=menu(a);
             switch(opcion){
                 case 1:
                     System.out.println("Introduce el nombre de la cancion");
@@ -39,15 +39,17 @@ public class Proyecto_Cola{
         
     }
 
-    public static int menu(){
+    public static int menu(Cola a){
         Scanner input=new Scanner(System.in);
         int opcion;
-        System.out.println("\n---Escoge una opcion---");
-        System.out.println("1) Agregar a la cola");
-        System.out.println("2) Sacar de la cola");
-        System.out.println("3) Ver la cola");
+        System.out.println("\n---ESCOGE UNA OPCION---");
+        System.out.println("Esta sonando ("+ a.obtenerPrimero() +")");
+        System.out.println("1) Agregar a la cola de reproduccion");
+        System.out.println("2) Reproducir la siguiente cancion");
+        System.out.println("3) Ver la cola de reproduccion");
         System.out.println("4) Salir");
         opcion=input.nextInt();
+        System.out.println("\n");
         return opcion;
     }
 }
