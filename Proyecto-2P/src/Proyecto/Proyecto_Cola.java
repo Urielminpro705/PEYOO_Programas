@@ -1,6 +1,6 @@
 package Proyecto;
 import java.util.Scanner;
-public class PEYOO_MCU_Cola{
+public class Proyecto_Cola{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         Cola a;
