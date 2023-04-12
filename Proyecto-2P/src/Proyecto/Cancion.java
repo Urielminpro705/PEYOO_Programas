@@ -1,3 +1,4 @@
+package Proyecto;
 public class Cancion {
     public String nombre;
     public double duracion;

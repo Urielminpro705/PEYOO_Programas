@@ -1,15 +1,16 @@
-public class ColaSimple{
-    char[] cola;
-    char[] aux;
+package Proyecto;
+public class Cola{
+    Cancion[] cola;
+    Cancion[] aux;
     int fin=-1;
     int contador=0;
     
-    public ColaSimple(int tam){
-        cola=new char[tam];
-        aux=new char[tam];
+    public Cola(int tam){
+        cola=new Cancion[tam];
+        aux=new Cancion[tam];
     }
 
-    public void insertar(char elemento){
+    public void push(Cancion elemento){
         if(fin==-1){
             fin=0;
             cola[fin]=elemento;
@@ -24,7 +25,32 @@ public class ColaSimple{
         }      
     }
 
-    public void eliminar(){
+    public Boolean isVacia(){
+        Boolean vacia;
+        if(this.contador==0){
+            vacia=true;
+        }
+        else{
+            vacia=false;
+        }
+        return vacia;
+    }
+
+    public Cancion obtenerPrimero(){
+        Cancion primero;
+        primero=this.cola[0];
+        return primero;
+    }
+
+    public int obtenerDimension(){
+        int dimension;
+        dimension=contador;
+        return dimension;
+    }
+
+
+
+    public void pop(){
         if(fin==-1){
             System.out.println("No hay elementos en la cola");
         }
@@ -42,11 +68,10 @@ public class ColaSimple{
             cola=aux;
             contador--;
             fin=contador-1;
-        }
-         
+        }        
     }
 
-    public void imprimir(){   
+    public void imprimirCola(){   
         for(int i=0; i<contador;i++){
             System.out.print(cola[i]);
         } 

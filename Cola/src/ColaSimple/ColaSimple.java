@@ -1,3 +1,4 @@
+package ColaSimple;
 public class ColaSimple{
     char[] cola;
     char[] aux;
@@ -9,7 +10,7 @@ public class ColaSimple{
         aux=new char[tam];
     }
 
-    public void push(char elemento){
+    public void insertar(char elemento){
         if(fin==-1){
             fin=0;
             cola[fin]=elemento;
@@ -24,32 +25,7 @@ public class ColaSimple{
         }      
     }
 
-    public Boolean isVacia(){
-        Boolean vacia;
-        if(this.contador==0){
-            vacia=true;
-        }
-        else{
-            vacia=false;
-        }
-        return vacia;
-    }
-
-    public int obtenerPrimero(){
-        int primero;
-        primero=this.cola[0];
-        return primero;
-    }
-
-    public int obtenerDimension(){
-        int dimension;
-        dimension=contador;
-        return dimension;
-    }
-
-
-
-    public void pop(){
+    public void eliminar(){
         if(fin==-1){
             System.out.println("No hay elementos en la cola");
         }
@@ -71,7 +47,7 @@ public class ColaSimple{
          
     }
 
-    public void imprimirCola(){   
+    public void imprimir(){   
         for(int i=0; i<contador;i++){
             System.out.print(cola[i]);
         } 

@@ -1,37 +1,29 @@
+package Proyecto;
 import java.util.Scanner;
 public class PEYOO_MCU_Cola{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-        ColaSimple a;
-        String x;
+        Cola a;
+        Cancion x;
         int opcion, tam;
         System.out.println("Introduce el tamaño de la cola");
         tam=input.nextInt();
-        a=new ColaSimple(tam);
+        a=new Cola(tam);
         do{
             opcion=menu();
             switch(opcion){
                 case 1:
-                    do{
-                        System.out.println("Introduce elementos en la cola (maximo " +tam+")");
-                        x=input.next();
-                        if(x.length()>tam){
-                            System.out.println("Demasidado grande, vuelve a intentar");
-                        }
-                    }while(x.length()>tam);
-                    
-
-                    for(int i=0;i<x.length();i++){
-                        a.insertar(x.charAt(i));
-                    }
+                    System.out.println("Introduce un elemento en la cola (maximo " +tam+")");
+                    x=new Cancion();
+                    x.nombre=input.next();
                 break;
 
                 case 2:
-                    a.eliminar();
+                    a.pop();
                 break;
 
                 case 3:
-                    a.imprimir();
+                    a.imprimirCola();
                 break;
 
                 case 4:

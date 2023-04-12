@@ -1,3 +1,4 @@
+package ColaSimple;
 import java.util.Scanner;
 public class PEYOO_MCU_Cola{
     public static void main(String[] args) {
@@ -22,16 +23,16 @@ public class PEYOO_MCU_Cola{
                     
 
                     for(int i=0;i<x.length();i++){
-                        a.push(x.charAt(i));
+                        a.insertar(x.charAt(i));
                     }
                 break;
 
                 case 2:
-                    a.pop();
+                    a.eliminar();
                 break;
 
                 case 3:
-                    a.imprimirCola();
+                    a.imprimir();
                 break;
 
                 case 4:
