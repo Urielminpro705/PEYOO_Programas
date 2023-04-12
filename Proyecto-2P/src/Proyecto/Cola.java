@@ -1,9 +1,9 @@
 package Proyecto;
 public class Cola{
-    Cancion[] cola;
-    Cancion[] aux;
-    int fin=-1;
-    int contador=0;
+    private Cancion[] cola;
+    private Cancion[] aux;
+    private int fin=-1;
+    private int contador=0;
     
     public Cola(int tam){
         cola=new Cancion[tam];
@@ -52,8 +52,6 @@ public class Cola{
         dimension=contador;
         return dimension;
     }
-
-
 
     public void pop(){
         if(fin==-1){
