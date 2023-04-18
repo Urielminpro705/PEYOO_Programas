@@ -37,28 +37,37 @@ public class ColaCircular{
     }*/
 
     public void insertar(char elemento){
-        if(fin==-1){
+        if(fin==cola.length){
             fin=0;
-            cola[fin]=elemento;
-            contador++;
-        }
-        else{
-            if(fin<cola.length){
-                if(inicio==-1){
-                    fin++;
+        }else{
+            if(fin==inicio){
+                System.out.println("No hay espacio");
+            }
+            else{
+                if(fin==-1){
+                    fin=0;
                     cola[fin]=elemento;
                     contador++;
                 }
                 else{
-                    if(inicio>-1){
-                        inicio++;
-                        cola[inicio]=elemento;
-                        contador++;    
-                    } 
-                }
-                
-            }       
-        }    
+                    if(fin<cola.length){
+                        if(inicio==-1){
+                            fin++;
+                            cola[fin]=elemento;
+                            contador++;
+                        }
+                        else{
+                            if(inicio>-1){
+                                fin++; 
+                                cola[fin]=elemento;
+                                contador++;   
+                            } 
+                        }
+                        
+                    }       
+                }    
+            }
+        }        
     }
 
     public void eliminar(){
@@ -66,16 +75,23 @@ public class ColaCircular{
             System.out.println("No hay elementos en la cola");
         }
         else{
-            if(inicio==-1){
-                cola[0]='\0';
-                contador--;
+            if(inicio==cola.length){
+                inicio=-1;
             }
             else{
-                if(inicio>-1){
+                if(inicio==-1){
+                    inicio=0;
                     cola[inicio]='\0';
                     contador--;
                 }
-            }
+                else{
+                    if(inicio>-1){
+                        inicio++;
+                        cola[inicio]='\0';
+                        contador--;
+                    }
+                }
+            }          
         }        
     }
 
