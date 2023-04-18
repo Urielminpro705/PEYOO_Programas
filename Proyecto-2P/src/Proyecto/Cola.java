@@ -1,9 +1,9 @@
 package Proyecto;
 public class Cola{
-    Cancion[] cola;
-    Cancion[] aux;
-    int fin=-1;
-    int contador=0;
+    private Cancion[] cola;
+    private Cancion[] aux;
+    private int fin=-1;
+    private int contador=0;
     
     public Cola(int tam){
         cola=new Cancion[tam];
@@ -36,9 +36,14 @@ public class Cola{
         return vacia;
     }
 
-    public Cancion obtenerPrimero(){
-        Cancion primero;
-        primero=this.cola[0];
+    public String obtenerPrimero(){
+        String primero;
+        if(contador==0){
+            primero="No hay canciones en la cola";
+        }
+        else{
+            primero=this.cola[0].nombre;
+        }
         return primero;
     }
 
@@ -47,8 +52,6 @@ public class Cola{
         dimension=contador;
         return dimension;
     }
-
-
 
     public void pop(){
         if(fin==-1){
@@ -72,8 +75,9 @@ public class Cola{
     }
 
     public void imprimirCola(){   
+        System.out.println("---Cola de reproduccion--");
         for(int i=0; i<contador;i++){
-            System.out.print(cola[i]);
+            System.out.println((i+1)+") "+cola[i].nombre);
         } 
         System.out.println("\n");      
     }
