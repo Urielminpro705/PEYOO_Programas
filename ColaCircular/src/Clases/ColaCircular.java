@@ -13,7 +13,7 @@ public class ColaCircular{
         }
         else{
             if(fin == -1){
-                fin++;;
+                fin++;
                 cola[fin] = nuevo;
                 contador++;
             }
@@ -60,28 +60,21 @@ public class ColaCircular{
     public void imprimir(){
         if(contador == 0){
             System.out.println("No hay canciones en la cola");
-        }
+        }        
         else{
             System.out.println("\n--Cola de reproduccion--");
-            if(inicio == 0){               
-                for(int i = 0; i < cola.length; i++){
-                    System.out.println(cola[i].nombre);
-                }     
-            }
-            else{
-                int j = inicio + 1;
-                for(int i=0; i < contador; i++){
-                    if(j < cola.length){
-                        System.out.println(cola[j].nombre);
-                        j++;
-                    }
-                    else{
-                        j = 0;
-                        System.out.println(cola[j].nombre);
-                        j++;
-                    }
+            int j = inicio + 1;
+            for(int i=0; i < contador; i++){
+                if(j < cola.length){
+                    System.out.println(cola[j].nombre);
+                    j++;
                 }
-            }           
+                else{
+                    j = 0;
+                    System.out.println(cola[j].nombre);
+                    j++;
+                }
+            }          
         }
     }
 
