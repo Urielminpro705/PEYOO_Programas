@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Circular{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-        ColaCircular c=new ColaCircular(3);
+        ColaCircular c=new ColaCircular(5);
         Persona c2;
         int opcion;
         do{
