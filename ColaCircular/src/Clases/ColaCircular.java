@@ -57,7 +57,7 @@ public class ColaCircular{
         }
     }
 
-    /*public void imprimir(){
+    public void imprimir(){
         if(contador == 0){
             System.out.println("No hay canciones en la cola");
         }
@@ -69,21 +69,25 @@ public class ColaCircular{
                 }     
             }
             else{
-                if(inicio < cola.length){
-                    for(int i = inicio + 1; i < cola.length; i++){
-                        System.out.println(cola[i].nombre);
+                int j = inicio + 1;
+                for(int i=0; i < contador; i++){
+                    if(j < cola.length){
+                        System.out.println(cola[j].nombre);
+                        j++;
                     }
-                    for(int i = 0; i < fin; i++){
-
+                    else{
+                        j = 0;
+                        System.out.println(cola[j].nombre);
+                        j++;
                     }
                 }
             }           
         }
-    }*/
-
-    public void imprimir(){
-        for(int i = 0; i < cola.length; i++){
-            System.out.println(cola[i].nombre);
-        }  
     }
+
+    // public void imprimir(){
+    //     for(int i = 0; i < cola.length; i++){
+    //         System.out.println(cola[i].nombre);
+    //     }  
+    // }
 }
