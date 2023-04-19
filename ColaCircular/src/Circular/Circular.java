@@ -1,19 +1,17 @@
+package Circular;
 import java.util.Scanner;
-
-import Clases.Cancion;
-import Clases.ColaCircular;
 public class Circular{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         ColaCircular c=new ColaCircular(3);
-        Cancion c2;
+        Persona c2;
         int opcion;
         do{
             opcion=menu();
             switch (opcion) {
                 case 1:
                     System.out.println("Ingresa el nombre de la cancion");
-                    c2=new Cancion(input.nextLine());
+                    c2=new Persona(input.nextLine());
                     c.insertar(c2);
                     break;
             

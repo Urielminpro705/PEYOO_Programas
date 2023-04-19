@@ -1,13 +1,13 @@
-package Clases;
+package Circular;
 public class ColaCircular{
-    Cancion[] cola;
+    Persona[] cola;
     int inicio = -1, fin = -1, contador = 0;
 
     public ColaCircular(int tam){
-        cola=new Cancion[tam];
+        cola=new Persona[tam];
     }
 
-    public void insertar(Cancion nuevo){
+    public void insertar(Persona nuevo){
         if(contador == cola.length){
             System.out.println("Ya no hay espacio");
         }
