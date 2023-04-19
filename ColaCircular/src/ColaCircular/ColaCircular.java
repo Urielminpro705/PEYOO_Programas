@@ -8,7 +8,6 @@ public class ColaCircular{
     
     public ColaCircular(int tam){
         cola=new char[tam];
-        aux=new char[tam];
     }
 
     /*public void insertar(char elemento){
