@@ -34,7 +34,7 @@ public class ColaCircular{
 
     public void eliminar(){
         if(contador == 0){
-            System.out.println("No hay elementos en la cola");
+            System.out.println("No hay nadie en la cola");
         }
         else{
             if(inicio == -1){
@@ -59,10 +59,10 @@ public class ColaCircular{
 
     public void imprimir(){
         if(contador == 0){
-            System.out.println("No hay canciones en la cola");
+            System.out.println("No hay nadie en la cola");
         }        
         else{
-            System.out.println("\n--Cola de reproduccion--");
+            System.out.println("\n--Cola para pagar en la tienda--");
             int j = inicio + 1;
             for(int i=0; i < contador; i++){
                 if(j < cola.length){
@@ -77,10 +77,4 @@ public class ColaCircular{
             }          
         }
     }
-
-    // public void imprimir(){
-    //     for(int i = 0; i < cola.length; i++){
-    //         System.out.println(cola[i].nombre);
-    //     }  
-    // }
 }

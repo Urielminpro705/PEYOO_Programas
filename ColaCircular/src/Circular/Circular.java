@@ -10,7 +10,7 @@ public class Circular{
             opcion=menu();
             switch (opcion) {
                 case 1:
-                    System.out.println("Ingresa el nombre de la cancion");
+                    System.out.println("Ingresa el nombre de la persona");
                     c2=new Persona(input.nextLine());
                     c.insertar(c2);
                     break;
