@@ -47,11 +47,17 @@ public class ColaPrioridad{
     }
 
     public void imprimirCola(){  
-        System.out.println("---Cola de videojuegos--");
-        for(int i=0; i<contador;i++){
-            System.out.println(cola[i].prioridad + ") "+ cola[i].titulo + " " + cola[i].genero+ " " +cola[i].almacenamiento+ " " +cola[i].desarrollador);
+        if(contador==0){
+            System.out.println("No hay elementos en la cola");
+        }
+        else{
+            System.out.println("---Cola de videojuegos--");
+            System.out.println("Prioridad\tTitulo\tGenero\tAlmacenamiento\tDesarrollador");
+            for(int i=0; i<contador;i++){
+                System.out.println(cola[i].prioridad + ") "+ cola[i].titulo + "\t" + cola[i].genero+ "\t" +cola[i].almacenamiento+ "\t" +cola[i].desarrollador);
+            } 
+            System.out.println("\n");     
         } 
-        System.out.println("\n");      
     }
 
     public void ordenar(){
