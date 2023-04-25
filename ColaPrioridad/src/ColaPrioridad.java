@@ -21,11 +21,11 @@ public class ColaPrioridad{
                 cola[fin]=elemento;
                 contador++;
             }       
-        }      
+        }
+        ordenar();      
     }
 
-    public void pop(){
-        ordenar(); 
+    public void pop(){ 
         if(fin==-1){
             System.out.println("No hay elementos en la cola");
         }
@@ -47,9 +47,9 @@ public class ColaPrioridad{
     }
 
     public void imprimirCola(){  
-        System.out.println("---Cola de reproduccion--");
+        System.out.println("---Cola de videojuegos--");
         for(int i=0; i<contador;i++){
-            System.out.println((i+1)+") "+cola[i].titulo);
+            System.out.println(cola[i].prioridad + ") "+ cola[i].titulo + " " + cola[i].genero+ " " +cola[i].almacenamiento+ " " +cola[i].desarrollador);
         } 
         System.out.println("\n");      
     }
