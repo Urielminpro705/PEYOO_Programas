@@ -25,6 +25,7 @@ public class ColaPrioridad{
     }
 
     public void pop(){
+        ordenar(); 
         if(fin==-1){
             System.out.println("No hay elementos en la cola");
         }
@@ -45,7 +46,7 @@ public class ColaPrioridad{
         }        
     }
 
-    public void imprimirCola(){   
+    public void imprimirCola(){  
         System.out.println("---Cola de reproduccion--");
         for(int i=0; i<contador;i++){
             System.out.println((i+1)+") "+cola[i].titulo);
