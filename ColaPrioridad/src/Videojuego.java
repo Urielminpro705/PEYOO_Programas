@@ -6,5 +6,6 @@ public class Videojuego {
     public float almacenamiento;
     public int prioridad;
 
+    //Constructor
     public Videojuego(){}
 }

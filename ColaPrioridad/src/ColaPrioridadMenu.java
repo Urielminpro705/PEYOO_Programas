@@ -11,7 +11,7 @@ public class ColaPrioridadMenu{
                 case 1:
                     juego=new Videojuego();
                     System.out.println("Introduce el titulo del videojuego");
-                    juego.titulo=input.next();
+                    juego.titulo=input.nextLine();
                     System.out.println("Introduce el genero");
                     juego.genero=input.next();
                     System.out.println("Introduce el desarrollador");
@@ -44,6 +44,7 @@ public class ColaPrioridadMenu{
         }while(opcion!=4);
     }
 
+    //Metodo para imprimir un menu
     public static int menu(){
         Scanner input=new Scanner(System.in);
         int opcion;
