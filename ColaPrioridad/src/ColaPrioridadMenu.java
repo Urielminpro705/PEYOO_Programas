@@ -11,7 +11,7 @@ public class ColaPrioridadMenu{
                 case 1:
                     juego=new Videojuego();
                     System.out.println("Introduce el titulo del videojuego");
-                    juego.titulo=input.nextLine();
+                    juego.titulo=input.next();
                     System.out.println("Introduce el genero");
                     juego.genero=input.next();
                     System.out.println("Introduce el desarrollador");

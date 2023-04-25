@@ -57,9 +57,9 @@ public class ColaPrioridad{
         }
         else{
             System.out.println("---Cola de videojuegos--");
-            System.out.println("Prioridad\tTitulo\t\tGenero\t\tAlmacenamiento\tDesarrollador");
+            System.out.println("Prioridad\tTitulo\tGenero\t\tAlmacenamiento\tDesarrollador");
             for(int i=0; i<contador;i++){
-                System.out.println(cola[i].prioridad + ")\t\t"+ cola[i].titulo + "\t" + cola[i].genero+ "\t" +cola[i].almacenamiento+ "\t" +cola[i].desarrollador);
+                System.out.println(cola[i].prioridad + ")\t\t"+ cola[i].titulo + "\t" + cola[i].genero+ "\t" +cola[i].almacenamiento+ "\t" +cola[i].desarrollador+"\t"+cola[i].fecha);
             } 
             System.out.println("\n");     
         } 
