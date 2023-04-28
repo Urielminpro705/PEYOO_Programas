@@ -18,8 +18,7 @@ public class ProyectoPila {
         while(i<operacion.length()){
             symb=operacion.charAt(i);
             if(symb!='+' && symb!='-' && symb!='*' && symb!='/'){ 
-                a=Double.parseDouble(String.valueOf(symb));;
-                System.out.println(a);         
+                a=Double.parseDouble(String.valueOf(symb));;       
                 pila.push(a);
             }
             else{
