@@ -33,15 +33,18 @@ public class ProyectoPila {
             symb=operacion.charAt(i);
             //Se evalua si el valor es un operando o un operador
             if(symb!='+' && symb!='-' && symb!='*' && symb!='/' && symb!='$'){ 
-                //Si el valor de tipo char es un operando se va a convertir a string para despues convertise en tipo double y se inserta en la pila
+                /*Si el valor de tipo char es un operando se va a convertir a string 
+                para despues convertise en tipo double y se inserta en la pila*/
                 a=Double.parseDouble(String.valueOf(symb));       
                 pila.push(a);
             }
             else{
-                //Si el valor es un operador se va a sacar dos elementos de la pila para darle valor a dos variables
+                /*Si el valor es un operador se va a sacar dos elementos 
+                de la pila para darle valor a dos variables*/
                 b2=pila.pop();
                 b1=pila.pop();
-                //Se hace la operacion correspondiente al operador y el resultado se inserta en la pila
+                /*Se hace la operacion correspondiente al operador y el 
+                resultado se inserta en la pila*/
                 if(symb=='+'){
                     valor=b1+b2;
                     pila.push(valor);
@@ -61,7 +64,8 @@ public class ProyectoPila {
             }
             i++;           
         }
-        //Cuando se termina el ciclo el ultimo elemento que queda en la pila es el resultado, asi que, el retorno es un pop
+        /*Cuando se termina el ciclo el ultimo elemento que queda en la pila es 
+        el resultado, asi que, el retorno es un pop*/
         return pila.pop();
     }   
 }
