@@ -17,7 +17,7 @@ public class ProyectoPila {
         Double b1, b2, valor, a;   
         while(i<operacion.length()){
             symb=operacion.charAt(i);
-            if(symb!='+' && symb!='-' && symb!='*' && symb!='/'){ 
+            if(symb!='+' && symb!='-' && symb!='*' && symb!='/' && symb!='$'){ 
                 a=Double.parseDouble(String.valueOf(symb));;       
                 pila.push(a);
             }
@@ -36,10 +36,13 @@ public class ProyectoPila {
                 }else if(symb=='/'){
                     valor=b1/b2;
                     pila.push(valor);
-                }  
+                }else if(symb=='$'){
+                    valor=Math.pow(b1,b2);
+                    pila.push(valor); 
+                }
             }
-            i++;
+            i++;           
         }
         return pila.pop();
-    }
+    }   
 }
