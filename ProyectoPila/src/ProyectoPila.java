@@ -1,3 +1,14 @@
+/*
+Universidad De La Salle Bajío
+Ingenieria en software y sistemas computacionales
+Metodologia y programacion de sistemas
+Uriel Mata Castellanos 76907
+Proyecto de pila del segundo parcial
+Realiza un programa que evalúe una expresion 
+posfija. Puedes utilizar la clase Stack
+*/
+
+//Código
 import java.util.Stack;
 import java.util.Scanner;
 public class ProyectoPila {
