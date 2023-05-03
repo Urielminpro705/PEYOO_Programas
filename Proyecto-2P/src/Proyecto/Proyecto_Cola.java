@@ -1,3 +1,12 @@
+/*
+Universidad De La Salle Bajío
+Ingenieria en software y sistemas computacionales
+Metodologia y programacion de sistemas
+Uriel Mata Castellanos 76907
+Proyecto de cola simple del segundo parcial
+*/
+
+//Código
 package Proyecto;
 import java.util.Scanner;
 public class Proyecto_Cola{
