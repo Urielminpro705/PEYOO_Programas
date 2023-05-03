@@ -12,12 +12,12 @@ import java.util.Scanner;
 public class Proyecto_Cola{
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-        Cola a;
+        ColaSimple a;
         Cancion x;
         int opcion, tam, tamActual;
         System.out.println("Introduce el tamaño de la cola de reproduccion");
         tam=input.nextInt();
-        a=new Cola(tam);
+        a=new ColaSimple(tam);
         //Ciclo que permite que el usuario pueda acceder al menu varias veces
         do{
             opcion=menu(a);
@@ -67,7 +67,7 @@ public class Proyecto_Cola{
     }
 
     //Funcion que imprime el menu de opciones
-    public static int menu(Cola a){
+    public static int menu(ColaSimple a){
         Scanner input=new Scanner(System.in);
         int opcion;
         System.out.println("\n---ESCOGE UNA OPCION---");

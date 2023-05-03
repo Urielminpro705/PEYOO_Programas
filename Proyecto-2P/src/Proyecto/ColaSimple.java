@@ -7,7 +7,7 @@ public class ColaSimple{
     private int inicio=0;
     
     //Constructor
-    public Cola(int tam){
+    public ColaSimple(int tam){
         cola=new Cancion[tam];
     }
 
