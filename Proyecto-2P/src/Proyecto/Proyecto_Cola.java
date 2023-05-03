@@ -17,9 +17,9 @@ public class Proyecto_Cola{
                     x=new Cancion();
                     x.nombre=input.next();
                     System.out.println("Introduce la duracion de la cancion");
-                    x.duracion=input.nextLine();
+                    x.duracion=input.next();
                     System.out.println("Introduce el compositor de la cancion");
-                    x.compositor=input.nextLine();
+                    x.compositor=input.next();
                     a.push(x);                  
                 break;
 
