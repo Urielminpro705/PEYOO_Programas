@@ -17,18 +17,11 @@ public class Cola{
             System.out.println("Ya no hay espacio en la cola");
         }
         else{
-            if(fin==-1){
-                fin=0;
+            if(fin<cola.length){
+                fin++;
                 cola[fin]=elemento;
                 contador++;
-            }
-            else{
-                if(fin<cola.length){
-                    fin++;
-                    cola[fin]=elemento;
-                    contador++;
-                }       
-            }    
+            }           
         }          
     }
 
