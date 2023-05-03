@@ -1,12 +1,10 @@
 package Proyecto;
 public class Cancion {
     public String nombre;
-    public double duracion;
-
+    
     public Cancion(){}
 
-    public Cancion(String nombre, double duracion){
+    public Cancion(String nombre){
         this.nombre=nombre;
-        this.duracion=duracion;
     }
 }
