@@ -72,7 +72,7 @@ public class Cola{
     public void imprimirCola(){   
         System.out.println("---Cola de reproduccion--");
         System.out.println("Cancion\tCompositor\tDuracion");
-        for(int i = inicio; i<cola.length;i++){
+        for(int i = inicio; i<=fin;i++){
             System.out.println(cola[i].nombre + "\t" + cola[i].compositor + "\t" +cola[i].duracion);
         } 
         System.out.println("\n");      

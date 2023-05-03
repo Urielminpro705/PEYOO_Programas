@@ -14,7 +14,7 @@ public class Proyecto_Cola{
         Scanner input=new Scanner(System.in);
         Cola a;
         Cancion x;
-        int opcion, tam;
+        int opcion, tam, tamActual;
         System.out.println("Introduce el tamaño de la cola de reproduccion");
         tam=input.nextInt();
         a=new Cola(tam);
@@ -25,14 +25,20 @@ public class Proyecto_Cola{
             switch(opcion){
                 //Agrega un objeto tipo cancion a la cola
                 case 1:
-                    System.out.println("Introduce el nombre de la cancion");
-                    x=new Cancion();
-                    x.nombre=input.next();
-                    System.out.println("Introduce la duracion de la cancion");
-                    x.duracion=input.next();
-                    System.out.println("Introduce el compositor de la cancion");
-                    x.compositor=input.next();
-                    a.push(x);                  
+                    tamActual=a.obtenerDimension();
+                    if(tamActual==tam){
+                        System.out.println("Ya no hay espacio en la fila");
+                    }
+                    else{
+                        System.out.println("Introduce el nombre de la cancion");
+                        x=new Cancion();
+                        x.nombre=input.next();
+                        System.out.println("Introduce la duracion de la cancion");
+                        x.duracion=input.next();
+                        System.out.println("Introduce el compositor de la cancion");
+                        x.compositor=input.next();
+                        a.push(x); 
+                    }                      
                 break;
 
                 //Saca un elemento de la cola
