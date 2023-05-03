@@ -1,28 +1,32 @@
 package Proyecto;
 public class Cola{
     private Cancion[] cola;
-    private Cancion[] aux;
     private int fin=-1;
     private int contador=0;
+    private int inicio=0;
     
     public Cola(int tam){
         cola=new Cancion[tam];
-        aux=new Cancion[tam];
     }
 
     public void push(Cancion elemento){
-        if(fin==-1){
-            fin=0;
-            cola[fin]=elemento;
-            contador++;
+        if(contador==cola.length){
+            System.out.println("Ya no hay espacio en la cola");
         }
         else{
-            if(fin<cola.length){
-                fin++;
+            if(fin==-1){
+                fin=0;
                 cola[fin]=elemento;
                 contador++;
-            }       
-        }      
+            }
+            else{
+                if(fin<cola.length){
+                    fin++;
+                    cola[fin]=elemento;
+                    contador++;
+                }       
+            }    
+        }          
     }
 
     public Boolean isVacia(){
@@ -42,7 +46,7 @@ public class Cola{
             primero="No hay canciones en la cola";
         }
         else{
-            primero=this.cola[0].nombre;
+            primero=this.cola[inicio].nombre;
         }
         return primero;
     }
@@ -54,29 +58,19 @@ public class Cola{
     }
 
     public void pop(){
-        if(fin==-1){
+        if(contador==0){
             System.out.println("No hay elementos en la cola");
         }
         else{
-            if(contador==cola.length){
-                for(int i=0; i<contador-1;i++){
-                    aux[i]=cola[i+1];
-                }
-            }
-            else{
-                for(int i=0; i<contador;i++){
-                    aux[i]=cola[i+1];
-                }
-            }            
-            cola=aux;
+            cola[inicio]=null;
+            inicio++;
             contador--;
-            fin=contador-1;
         }        
     }
 
     public void imprimirCola(){   
         System.out.println("---Cola de reproduccion--");
-        for(int i=0; i<contador;i++){
+        for(int i = inicio; i<contador;i++){
             System.out.println((i+1)+") "+cola[i].nombre);
         } 
         System.out.println("\n");      
