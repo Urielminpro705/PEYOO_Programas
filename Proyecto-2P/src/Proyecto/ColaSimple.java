@@ -1,5 +1,5 @@
 package Proyecto;
-public class Cola{
+public class ColaSimple{
     //Atributos privados
     private Cancion[] cola;
     private int fin=-1;
