@@ -70,8 +70,8 @@ public class Cola{
 
     public void imprimirCola(){   
         System.out.println("---Cola de reproduccion--");
-        for(int i = inicio; i<contador;i++){
-            System.out.println((i+1)+") "+cola[i].nombre);
+        for(int i = inicio; i<cola.length;i++){
+            System.out.println("Nombre: "+cola[i].nombre);
         } 
         System.out.println("\n");      
     }
