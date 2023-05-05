@@ -48,7 +48,7 @@ public class Proyecto_Cola{
 
                 //Imprime la cola
                 case 3:
-                    a.imprimirCola();
+                    imprimirCola(a);
                 break;
 
                 //Termina el ciclo
@@ -79,5 +79,15 @@ public class Proyecto_Cola{
         opcion=input.nextInt();
         System.out.println("\n");
         return opcion;
+    }
+
+    //Funcion para imprimir todos los objetos de la cola
+    public static void imprimirCola(ColaSimple a){   
+        System.out.println("---Cola de reproduccion--");
+        System.out.println("Cancion\tCompositor\tDuracion");
+        for(int i = a.getIncio(); i<=a.getFin();i++){
+            System.out.println(a.getCola()[i].nombre + "\t" + a.getCola()[i].compositor + "\t" +a.getCola()[i].duracion);
+        } 
+        System.out.println("\n");      
     }
 }

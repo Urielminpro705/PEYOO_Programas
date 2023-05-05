@@ -67,14 +67,38 @@ public class ColaSimple{
             contador--;
         }        
     }
+    
+    //Metodos para ver los atributos
+    public int getFin(){
+        return this.fin;
+    }
+    
+    public int getContador(){
+        return this.contador;
+    }
 
-    //Funcion para imprimir todos los objetos de la cola
-    public void imprimirCola(){   
-        System.out.println("---Cola de reproduccion--");
-        System.out.println("Cancion\tCompositor\tDuracion");
-        for(int i = inicio; i<=fin;i++){
-            System.out.println(cola[i].nombre + "\t" + cola[i].compositor + "\t" +cola[i].duracion);
-        } 
-        System.out.println("\n");      
+    public int getIncio(){
+        return this.inicio;
+    }
+
+    public Cancion[] getCola(){
+        return this.cola;
+    }
+
+    //Metodos para modificar los atributos
+    public void setFin(int fin){
+        this.fin=fin;
+    }
+
+    public void setContador(int contador){
+        this.contador=contador;
+    }
+
+    public void setInicio(int inicio){
+        this.inicio=inicio;
+    }
+
+    public void setCola(Cancion[] cola){
+        this.cola=cola;
     }
 }
