@@ -22,12 +22,13 @@ public class Recursividad {
                     for (int i = 0; i < n; i++) {
                         System.out.print(fibonacci(i) + " ");
                     }
+                    System.out.println("\n\n");
                     break;
                 
                 case 2:
                     System.out.println("Introduce un numero");
                     n = input.nextInt();
-                    System.out.println("El factorial de " + n + " es: " + fibonacci(n));
+                    System.out.println("El factorial de " + n + " es: " + fibonacci(n) + "\n");
                     break;
 
                 case 3:
