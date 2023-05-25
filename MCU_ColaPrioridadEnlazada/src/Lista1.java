@@ -7,30 +7,24 @@ public class Lista1 {
 
     //Metodo para insertar un elemento dentro de la lista
     public void Insertar(String nombre, String padec, String nss, int prio){
-        //Se crea un objeto de tipo nodo
         Nodo1 nuevo = new Nodo1(nombre, padec, nss, prio);
-        //if que analiza si el inicio aun no se a usado
-        if(inicio == null)
-            //Se establece que el inicio es igual al nuevo nodo
+        if(inicio == null || prio < inicio.prio) {
+            nuevo.sig = inicio;
             inicio = nuevo;
-        else{
-            //if que analiza si el inicio ya se uso
+        } else {
             if(inicio != null){
-                //Se guarda el inicio en el auxiliar
                 aux = inicio;
-                //Ciclo que se repite siempre y cuando el siguiente del auxiliar sea diferente a null
-                while(aux.sig != null){
-                    //El auxiliar es igual al atributo siguiente de si mismo
+                while(aux.sig != null && aux.sig.prio <= prio){
                     aux = aux.sig;
                 }
-                //Se establece que el siguiente del auxiliar es igual al nuevo nodo
+                nuevo.sig = aux.sig;
                 aux.sig = nuevo;
             }
         }
     }
-
+    
     //Metodo para eliminar un elemento de la lista
-    public void eliminar(String nss){
+    public void eliminar(){
         //Se guarda el inicio en el auxiliar
         aux = inicio;
         //if que analiza si el inicio no se a usado
@@ -40,7 +34,7 @@ public class Lista1 {
         }
         else{
             //Ciclo que se repite mientras que el auxiliar sea diferente a null
-            while(aux != null && !aux.getNSS().equals(nss)){
+            while(aux != null){
                 //EL atributo ant es igual al auxiliar
                 ant = aux;
                 //El auxiliar es igual al atributo sig de si mismo
