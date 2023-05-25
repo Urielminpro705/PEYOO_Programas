@@ -1,22 +1,19 @@
 public class Nodo1 {
-    //Atributo para el nombre
     private String Nombre;
-    //Atributo para el padecimiento
     private String padecimiento;
-    //Atributo para el NSS
     private String NSS;
-    //Atributo para la prioridad 
     public int prio;
-    //Atributo para el siguiente nodo
     public Nodo1 sig;
+    private int edad;
 
     //Metodo constructor
-    public Nodo1(String Nombre, String Padecimiento, String NSS, int prio){
+    public Nodo1 (String Nombre, String Padecimiento, String NSS, int prio, int edad) {
         this.Nombre = Nombre;
         this.padecimiento = Padecimiento;
         this.NSS = NSS;
         this.sig = null;
         this.prio = prio;
+        this.edad = edad;
     }
 
     //Metodo para obtener NSS
@@ -32,6 +29,16 @@ public class Nodo1 {
     //Metodo para obtener el padecimiento
     public String getPadecimiento() {
         return this.padecimiento;
+    }
+
+    //Metodo para obtener la edad
+    public int getEdad() {
+        return edad;
+    }
+
+    //Metodo para establecer la edad
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     //Metodo para establecer el NSS
