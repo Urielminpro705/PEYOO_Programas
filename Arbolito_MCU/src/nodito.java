@@ -1,5 +1,3 @@
-package Arbolito;
-
 public class nodito {
     //Atributo de numero
     int numero;

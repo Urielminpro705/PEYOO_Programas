@@ -1,5 +1,3 @@
-package Arbolito;
-
 public class arbolito {
     //Se declara el nodo que va a ser la raiz
     nodito raiz;
