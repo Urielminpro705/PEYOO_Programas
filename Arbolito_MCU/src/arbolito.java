@@ -5,43 +5,6 @@ public class arbolito {
         raiz = null; // La raiz se inicializa como vacia
     }
 
-    /*
-    //Metodo para insertar un nuevo nodo
-    public void insertar (int e){
-        //Se declara un nodo nuevo
-        nodito nuevo;
-        //Se inicializa el nodo con el numero
-        nuevo = new nodito(e);
-        //If que comprueba que es la primera raiz
-        if (raiz == null)
-            //Se guarda la raiz como nueva
-            raiz = nuevo;
-        else{
-            //Se crea un nodo y se hace null
-            nodito ant = null;
-            //Se crea un nodo auxiliar
-            nodito aux;
-            //Se guarda la raiz en el auxiliar
-            aux = raiz;
-            //Ciclo para encontrar donde se debe insertar el nuevo nodo
-            while (aux != null){
-                ant = aux;
-                if (e <= aux.numero){
-                    aux = aux.izq;
-                }
-                else{
-                    aux = aux.der;
-                }
-            }
-            if (e <= ant.numero){
-                ant.izq = nuevo;
-            }
-            else{
-                ant.der = nuevo;
-            }
-        }
-    }*/
-
     public void insertar(int e) {
         nodito nuevo = new nodito(e); // Se crea un nuevo nodo con el valor proporcionado
         if (raiz == null) {
@@ -138,7 +101,7 @@ public class arbolito {
     private nodito buscarRemplazo(nodito nodo) {
         nodito actual = nodo;
         while (actual.izq != null) {
-            actual = actual.izq; // Se mueve hacia la izquierda hasta encontrar el nodo más pequeño (sucesor)
+            actual = actual.izq; // Se mueve hacia la izquierda hasta encontrar el nodo más pequeño
         }
         return actual; // Se devuelve el nodo sucesor encontrado
     }
