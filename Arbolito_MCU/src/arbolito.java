@@ -2,7 +2,7 @@ public class arbolito {
     nodito raiz; // Se declara el nodo que va a ser la raiz
     // Metodo constructor
     public arbolito () {
-        raiz = null; // La raiz empieza como vacia
+        raiz = null; // La raiz se inicializa como vacia
     }
 
     /*
@@ -72,7 +72,7 @@ public class arbolito {
     public void preorden(nodito r){
         // Si r no esta vacia
         if(r != null){ 
-            System.out.println(r.numero + ", "); // Imprimir numero
+            System.out.print(r.numero + ", "); // Imprimir numero
             preorden(r.izq); // Se llama al mismo metodo por la izquierda
             preorden(r.der); // Se llama al mismo metodo por la derecha
         }
@@ -82,7 +82,7 @@ public class arbolito {
     public void inorden(nodito r){
         if(r != null){
             preorden(r.izq); // Se llama al mismo metodo por la izquierda
-            System.out.println(r.numero + ", "); // Imprimir numero
+            System.out.print(r.numero + ", "); // Imprimir numero
             preorden(r.der); // Se llama al mismo metodo por la derecha
         }
     }
@@ -92,7 +92,7 @@ public class arbolito {
         if(r != null){
             preorden(r.izq); // Se llama al mismo metodo por la izquierda
             preorden(r.der); // Se llama al mismo metodo por la derecha
-            System.out.println(r.numero + ", "); // Imprimir numero
+            System.out.print(r.numero + ", "); // Imprimir numero
         }
     }
 
