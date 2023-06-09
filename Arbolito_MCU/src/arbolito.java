@@ -63,7 +63,7 @@ public class arbolito {
         raiz = eliminarNodo(raiz, e); // Se llama al método privado para eliminar el nodo, pasando la raíz actual y el valor a eliminar
     }
     
-    private nodito eliminarNodo(nodito act, int valor) {
+    public nodito eliminarNodo(nodito act, int valor) {
         if (act == null) {
             return act; // Si el árbol está vacío o se llegó al final del árbol sin encontrar el valor, se retorna la raíz actual
         }
@@ -98,7 +98,7 @@ public class arbolito {
         return act; // Se devuelve la raíz actualizada después de eliminar el nodo
     }
     
-    private nodito buscarRemplazo(nodito nodo) {
+    public nodito buscarRemplazo(nodito nodo) {
         nodito actual = nodo;
         while (actual.izq != null) {
             actual = actual.izq; // Se mueve hacia la izquierda hasta encontrar el nodo más pequeño
