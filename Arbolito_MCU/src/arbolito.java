@@ -49,7 +49,6 @@ public class arbolito {
         } else {
             nodito aux = raiz; // Se declara un nodo auxiliar y se inicializa con la raíz actual
             nodito ant; // Se declara un nodo anterior
-
             while (aux != null) { // Se busca la posición adecuada para insertar el nuevo nodo
                 ant = aux; // Se guarda el nodo actual como el nodo anterior
                 if (e <= aux.numero) { // Si el valor del nuevo nodo es menor o igual que el valor del nodo actual
@@ -68,11 +67,11 @@ public class arbolito {
             }
         }
     }
-    
 
     //Metodo para mostrar el recorrido en preorden
     public void preorden(nodito r){
-        if(r != null){ // Si r no esta vacia
+        // Si r no esta vacia
+        if(r != null){ 
             System.out.println(r.numero + ", "); // Imprimir numero
             preorden(r.izq); // Se llama al mismo metodo por la izquierda
             preorden(r.der); // Se llama al mismo metodo por la derecha
@@ -96,4 +95,52 @@ public class arbolito {
             System.out.println(r.numero + ", "); // Imprimir numero
         }
     }
+
+    public void eliminar(int e) {
+        raiz = eliminarNodo(raiz, e); // Se llama al método privado para eliminar el nodo, pasando la raíz actual y el valor a eliminar
+    }
+    
+    private nodito eliminarNodo(nodito raizActual, int valor) {
+        if (raizActual == null) {
+            return raizActual; // Si el árbol está vacío o se llegó al final del árbol sin encontrar el valor, se retorna la raíz actual
+        }
+    
+        // Si el valor a eliminar es menor que el valor de la raíz actual, se busca en el subárbol izquierdo
+        if (valor < raizActual.numero) {
+            raizActual.izq = eliminarNodo(raizActual.izq, valor); // Se llama recursivamente al método para eliminar en el subárbol izquierdo
+        }
+        // Si el valor a eliminar es mayor que el valor de la raíz actual, se busca en el subárbol derecho
+        else if (valor > raizActual.numero) {
+            raizActual.der = eliminarNodo(raizActual.der, valor); // Se llama recursivamente al método para eliminar en el subárbol derecho
+        }
+        // Si el valor a eliminar es igual al valor de la raíz actual, se encontró el nodo a eliminar
+        else {
+            // Caso 1: El nodo a eliminar es una hoja (no tiene hijos)
+            if (raizActual.izq == null && raizActual.der == null) {
+                raizActual = null; // Se elimina el nodo estableciéndolo como nulo
+            }
+            // Caso 2: El nodo a eliminar tiene solo un hijo (izquierdo o derecho)
+            else if (raizActual.izq == null) {
+                raizActual = raizActual.der; // Se reemplaza el nodo actual por su hijo derecho
+            } else if (raizActual.der == null) {
+                raizActual = raizActual.izq; // Se reemplaza el nodo actual por su hijo izquierdo
+            }
+            // Caso 3: El nodo a eliminar tiene dos hijos
+            else {
+                nodito sucesor = encontrarSucesor(raizActual.der); // Se busca el nodo sucesor (el nodo más pequeño del subárbol derecho)
+                raizActual.numero = sucesor.numero; // Se reemplaza el valor del nodo actual con el valor del sucesor
+                raizActual.der = eliminarNodo(raizActual.der, sucesor.numero); // Se elimina el sucesor recursivamente llamando al método de eliminación
+            }
+        }
+        return raizActual; // Se devuelve la raíz actualizada después de eliminar el nodo
+    }
+    
+    private nodito encontrarSucesor(nodito nodo) {
+        nodito actual = nodo;
+        while (actual.izq != null) {
+            actual = actual.izq; // Se mueve hacia la izquierda hasta encontrar el nodo más pequeño (sucesor)
+        }
+        return actual; // Se devuelve el nodo sucesor encontrado
+    }
+    
 }
