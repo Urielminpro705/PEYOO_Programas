@@ -100,42 +100,42 @@ public class arbolito {
         raiz = eliminarNodo(raiz, e); // Se llama al método privado para eliminar el nodo, pasando la raíz actual y el valor a eliminar
     }
     
-    private nodito eliminarNodo(nodito raizActual, int valor) {
-        if (raizActual == null) {
-            return raizActual; // Si el árbol está vacío o se llegó al final del árbol sin encontrar el valor, se retorna la raíz actual
+    private nodito eliminarNodo(nodito act, int valor) {
+        if (act == null) {
+            return act; // Si el árbol está vacío o se llegó al final del árbol sin encontrar el valor, se retorna la raíz actual
         }
     
         // Si el valor a eliminar es menor que el valor de la raíz actual, se busca en el subárbol izquierdo
-        if (valor < raizActual.numero) {
-            raizActual.izq = eliminarNodo(raizActual.izq, valor); // Se llama recursivamente al método para eliminar en el subárbol izquierdo
+        if (valor < act.numero) {
+            act.izq = eliminarNodo(act.izq, valor); // Se llama recursivamente al método para eliminar en el subárbol izquierdo
         }
         // Si el valor a eliminar es mayor que el valor de la raíz actual, se busca en el subárbol derecho
-        else if (valor > raizActual.numero) {
-            raizActual.der = eliminarNodo(raizActual.der, valor); // Se llama recursivamente al método para eliminar en el subárbol derecho
+        else if (valor > act.numero) {
+            act.der = eliminarNodo(act.der, valor); // Se llama recursivamente al método para eliminar en el subárbol derecho
         }
         // Si el valor a eliminar es igual al valor de la raíz actual, se encontró el nodo a eliminar
         else {
             // Caso 1: El nodo a eliminar es una hoja (no tiene hijos)
-            if (raizActual.izq == null && raizActual.der == null) {
-                raizActual = null; // Se elimina el nodo estableciéndolo como nulo
+            if (act.izq == null && act.der == null) {
+                act = null; // Se elimina el nodo estableciéndolo como nulo
             }
             // Caso 2: El nodo a eliminar tiene solo un hijo (izquierdo o derecho)
-            else if (raizActual.izq == null) {
-                raizActual = raizActual.der; // Se reemplaza el nodo actual por su hijo derecho
-            } else if (raizActual.der == null) {
-                raizActual = raizActual.izq; // Se reemplaza el nodo actual por su hijo izquierdo
+            else if (act.izq == null) {
+                act = act.der; // Se reemplaza el nodo actual por su hijo derecho
+            } else if (act.der == null) {
+                act = act.izq; // Se reemplaza el nodo actual por su hijo izquierdo
             }
             // Caso 3: El nodo a eliminar tiene dos hijos
             else {
-                nodito sucesor = encontrarSucesor(raizActual.der); // Se busca el nodo sucesor (el nodo más pequeño del subárbol derecho)
-                raizActual.numero = sucesor.numero; // Se reemplaza el valor del nodo actual con el valor del sucesor
-                raizActual.der = eliminarNodo(raizActual.der, sucesor.numero); // Se elimina el sucesor recursivamente llamando al método de eliminación
+                nodito sucesor = buscarRemplazo(act.der); // Se busca el nodo sucesor (el nodo más pequeño del subárbol derecho)
+                act.numero = sucesor.numero; // Se reemplaza el valor del nodo actual con el valor del sucesor
+                act.der = eliminarNodo(act.der, sucesor.numero); // Se elimina el sucesor recursivamente llamando al método de eliminación
             }
         }
-        return raizActual; // Se devuelve la raíz actualizada después de eliminar el nodo
+        return act; // Se devuelve la raíz actualizada después de eliminar el nodo
     }
     
-    private nodito encontrarSucesor(nodito nodo) {
+    private nodito buscarRemplazo(nodito nodo) {
         nodito actual = nodo;
         while (actual.izq != null) {
             actual = actual.izq; // Se mueve hacia la izquierda hasta encontrar el nodo más pequeño (sucesor)

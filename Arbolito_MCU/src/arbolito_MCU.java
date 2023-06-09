@@ -4,6 +4,9 @@ public class arbolito_MCU {
         a.insertar(20);
         a.insertar(1);
         a.insertar(50);
+        a.insertar(60);
+        a.inorden(a.raiz);
+        a.eliminar(20);
         a.inorden(a.raiz);
     }
 }
