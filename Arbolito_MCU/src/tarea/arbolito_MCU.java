@@ -15,17 +15,14 @@ public class arbolito_MCU {
         arbolito a = new arbolito(); // Se crea un objeto de la clase arbolito
         int opcion, numero; // Se declaran las variables opcion y numero
         // Se precargan algunos numeros
-        a.insertar(50);
         a.insertar(17);
-        a.insertar(12);
-        a.insertar(9);
-        a.insertar(14);
-        a.insertar(23);
-        a.insertar(19);
-        a.insertar(72);
-        a.insertar(54);
-        a.insertar(67);
-        a.insertar(76);
+        a.insertar(15);
+        a.insertar(1);
+        a.insertar(0);
+        a.insertar(3);
+        a.insertar(20);
+        a.insertar(18);
+        a.insertar(40);
         do{
             opcion = menu(); // Se llama a la funcion menu() y se guarda el valor de retorno en la variable opcion
             switch(opcion){ // Se inicia un switch basado en el valor de la variable opcion
