@@ -66,8 +66,8 @@ public class arbolito {
     
     public nodito eliminarNodo(nodito act, int valor) {
         if (act == null) {
-            System.out.println("No se encontro el numero deseado");
-            return act; // Si el arbol está vacio o se llego al final del arbol sin encontrar el valor, se retorna la raiz actual
+            System.out.println("El numero no existe"); // Se imprime un mensaje indicando que el numero buscado no existe en el arbol
+            return act; // Si el arbol esta vacio o se llego al final del arbol sin encontrar el valor, se retorna la raiz actual
         }
     
         // Si el valor a eliminar es menor que el valor de la raiz actual, se busca en el subarbol izquierdo
