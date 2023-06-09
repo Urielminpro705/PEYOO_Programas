@@ -58,11 +58,11 @@ public class Arbol {
     public void inorden(Nodo r){
         if(r != null){
             //Se llama al mismo metodo por la izquierda
-            preorden(r.izq);
+            inorden(r.izq);
             //Imprimir nombre y edad
             System.out.println(r.nombre + " tiene " + r.edad);
             //Se llama al mismo metodo por la derecha
-            preorden(r.der);
+            inorden(r.der);
         }
     }
 
@@ -70,9 +70,9 @@ public class Arbol {
     public void postorden(Nodo r){
         if(r != null){
             //Se llama al mismo metodo por la izquierda
-            preorden(r.izq);
+            postorden(r.izq);
             //Se llama al mismo metodo por la derecha
-            preorden(r.der);
+            postorden(r.der);
             //Imprimir nombre y edad
             System.out.println(r.nombre + " tiene " + r.edad);
         }

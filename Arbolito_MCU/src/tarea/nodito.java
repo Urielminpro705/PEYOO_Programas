@@ -1,3 +1,4 @@
+package tarea;
 public class nodito {
     int numero; // Atributo de numero
     nodito izq, der; // Atributos para direccionar los siguientes nodos
