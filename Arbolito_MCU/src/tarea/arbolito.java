@@ -82,7 +82,7 @@ public class arbolito {
         else {
             // Caso 1: El nodo a eliminar es una hoja (no tiene hijos)
             if (act.izq == null && act.der == null) {
-                act = null; // Se elimina el nodo estableciéndolo como nulo
+                act = null; // Se elimina el nodo estableciendolo como nulo
             }
             // Caso 2: El nodo a eliminar tiene solo un hijo (izquierdo o derecho)
             else if (act.izq == null) {
@@ -97,7 +97,7 @@ public class arbolito {
                 act.der = eliminarNodo(act.der, sucesor.numero); // Se elimina el sucesor recursivamente llamando al método de eliminacion
             }
         }
-        return act; // Se devuelve la raiz actualizada después de eliminar el nodo
+        return act; // Se devuelve la raiz actualizada despues de eliminar el nodo
     }
     
     public nodito buscarRemplazo(nodito nodo) {

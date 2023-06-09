@@ -54,9 +54,11 @@ public class arbolito_MCU {
         }while(opcion != 6); // El bucle se repite hasta que el usuario elija la opcion 6 (Salir)
     }
 
+    // Funcion que imprime un menu de opciones
     public static int menu(){
-        Scanner input = new Scanner(System.in);
-        int opcion;
+        Scanner input = new Scanner(System.in); // Se crea un objeto de tipo Scanner
+        int opcion; // Se declara la variable opcion
+        // Se imprime el menu de opciones
         System.out.println("---Escoge una opcion---");
         System.out.println("1) Agregar un numero");
         System.out.println("2) Eliminar un numero");
@@ -64,7 +66,7 @@ public class arbolito_MCU {
         System.out.println("4) Mostrar en inorden");
         System.out.println("5) Mostrar en postorden");
         System.out.println("6) Salir");
-        opcion = input.nextInt();
-        return opcion;
+        opcion = input.nextInt(); // Se guarda la opcion ingresada por el usuario en la variable opcion 
+        return opcion; // Se devuelve el valor de la variable opcion
     }
 }

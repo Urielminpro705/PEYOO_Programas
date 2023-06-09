@@ -5,7 +5,7 @@ public class nodito {
 
     //Metodo constructor
     public nodito(int numero){
-        this.numero = numero; // Se iguala el atributo de numero con el que se inserta
+        this.numero = numero; // Se guarda de numero dentro del atributo numero
         izq = null; // Se hace null al atributo de izquierda  
         der = null; // Se hace null al atributo de derecha
     }
